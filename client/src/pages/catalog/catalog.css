@@ -1,0 +1,125 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+}
+.catalog .catalog-header {
+  margin-left: 10px;
+  margin-bottom: 60px;
+}
+.catalog .catalog-choose-panel {
+  display: flex;
+}
+.catalog .catalog-choose-panel .catalog-choose-panel-sort-button {
+  cursor: pointer;
+  height: 40px;
+  margin-left: 45px;
+  font-size: 15px;
+  display: flex;
+  background-color: #101010;
+  color: #fff;
+  border: none;
+  font-family: "Montserrat";
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+.catalog .catalog-choose-panel .catalog-choose-panel-sort-button:hover {
+  color: #ffa542;
+  transform: scale(1.05);
+  font-size: 16px;
+}
+.catalog .catalog-choose-panel .catalog-choose-panel-items {
+  display: flex;
+  margin-left: 75px;
+  flex-direction: row;
+}
+.catalog .catalog-choose-panel .catalog-choose-panel-items .catalog-choose-panel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+  margin-bottom: 60px;
+}
+.catalog .catalog-choose-panel .catalog-choose-panel-items .catalog-choose-panel-item span {
+  transition: all 0.3s ease;
+}
+.catalog .catalog-choose-panel .catalog-choose-panel-items .catalog-choose-panel-item span:hover {
+  color: #ffa542;
+}
+.catalog .catalog-choose-panel .catalog-choose-panel-items .catalog-choose-panel-item img {
+  margin-right: 10px;
+  width: 30px;
+  height: 35px;
+}
+.catalog .catalog-card-container {
+  width: 1110px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.catalog .catalog-card-container .catalog-card {
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  width: 250px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+.catalog .catalog-card-container .catalog-card:hover {
+  transform: translateY(2px);
+}
+.catalog .catalog-card-container .catalog-card .catalog-card-img {
+  width: 100px;
+}
+.catalog .catalog-card-container .catalog-card .catalog-card-title {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.catalog .catalog-card-container .catalog-card .catalog-card-description {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #8b8f92;
+  margin-bottom: 8px;
+}
+.catalog .catalog-card-container .catalog-card .catalog-card-basket {
+  padding-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.catalog .catalog-card-container .catalog-card .catalog-card-basket img {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+.catalog .catalog-card-container .catalog-card .catalog-card-basket button {
+  background-color: #101010;
+  color: #fff;
+  font-family: "Montserrat";
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.catalog .catalog-card-container .catalog-card .catalog-card-basket button:hover {
+  color: #ffa542;
+}
+.catalog .catalog-card-container .catalog-card .catalog-card-like {
+  display: flex;
+  width: 100%;
+}
+.catalog .catalog-card-container .catalog-card .catalog-card-like .catalog-fill-favorite {
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+}
+.catalog .catalog-card-container .catalog-card .catalog-card-like img {
+  cursor: pointer;
+}/*# sourceMappingURL=catalog.css.map */

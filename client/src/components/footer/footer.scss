@@ -1,0 +1,112 @@
+.footer {
+  width: 1110px;
+  align-items: center;
+  display: flex;
+  // position: static;
+  position: absolute; /* Используйте absolute для привязки к родителю */
+  bottom: 0;
+  bottom: 0;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 150px;
+  padding: 0 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  .footer-links,
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-media {
+    display: flex;
+    margin-bottom: 60px;
+    img {
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  }
+  .footer-info {
+    span,
+    a {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      &:hover {
+        color: #ffa542;
+      }
+    }
+  }
+  .footer-links {
+    a {
+      margin-top: 20px;
+      cursor: pointer;
+      &:hover {
+        color: #ffa542;
+      }
+    }
+  }
+
+  .footer-logo {
+    margin-top: 40px;
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer {
+    // margin-top: 300px;
+    max-width: 400px;
+    height: 300px;
+    padding: 0 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    margin: 0 auto;
+    .footer-logo {
+      display: none;
+      a {
+        margin-top: 10px;
+      }
+    }
+
+    .footer-info {
+      span,
+      a {
+        // margin-top: 40px;
+        margin-bottom: 0px;
+        cursor: pointer;
+        &:hover {
+          color: #ffa542;
+        }
+      }
+    }
+    .footer-info {
+      // padding: 0;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .footer-links {
+      // margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      a {
+        // margin-top: 60px;
+        cursor: pointer;
+        &:hover {
+          color: #ffa542;
+        }
+      }
+    }
+
+    .footer-logo {
+      margin-top: 40px;
+      align-self: flex-start;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+.footer {
+  width: 1110px;
+  align-items: center;
+  display: flex;
+  position: absolute; /* Используйте absolute для привязки к родителю */
+  bottom: 0;
+  bottom: 0;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 150px;
+  padding: 0 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.footer .footer-links,
+.footer .footer-info {
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer-media {
+  display: flex;
+  margin-bottom: 60px;
+}
+.footer .footer-media img {
+  cursor: pointer;
+  margin-right: 10px;
+}
+.footer .footer-info span,
+.footer .footer-info a {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.footer .footer-info span:hover,
+.footer .footer-info a:hover {
+  color: #ffa542;
+}
+.footer .footer-links a {
+  margin-top: 20px;
+  cursor: pointer;
+}
+.footer .footer-links a:hover {
+  color: #ffa542;
+}
+.footer .footer-logo {
+  margin-top: 40px;
+  align-self: flex-start;
+}/*# sourceMappingURL=footer.css.map */

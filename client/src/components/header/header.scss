@@ -1,0 +1,140 @@
+.header {
+  padding-top: 15px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  display: flex;
+
+  // background-color: #eaeaea;
+  background-color: #fff;
+  justify-content: space-between;
+  .header-choose-phone {
+    position: relative;
+    z-index: 1;
+  }
+
+  .founded-products {
+    margin-top: 3px;
+    border-radius: 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    max-height: 300px;
+    min-width: 100%;
+    overflow-y: auto;
+  }
+
+  .founded-item {
+    padding: 10px;
+    border-bottom: 1px solid #c9c7c7;
+    .founded-item-inf {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      span {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .founded-item a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      color: #ffa542;
+    }
+  }
+
+  .founded-item:hover {
+    background-color: #f5f5f5;
+  }
+
+  .header-logo {
+    font-weight: 700;
+    font-size: 25px;
+    margin-right: 65px;
+  }
+
+  .header-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-panel-like {
+      cursor: pointer;
+      position: relative;
+      margin-right: 10px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    .header-panel-basket {
+      cursor: pointer;
+      position: relative;
+      margin-right: 5px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    .header-panel-user-img {
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    .header-panel-counter-img {
+      position: absolute;
+      top: -7px;
+      left: 15px;
+    }
+    .header-panel-counter-span {
+      position: absolute;
+      font-size: 15px;
+      color: #fff;
+      top: -8px;
+      left: 20.5px;
+    }
+    .header-panel-user-img {
+      cursor: pointer;
+      margin-right: 15px;
+      margin-left: 3px;
+    }
+  }
+  .header-choose-phone {
+    input {
+      font-family: "Montserrat";
+      width: 250px;
+      padding: 8px 3px;
+      padding-left: 10px;
+      border-radius: 10px;
+      border: 1px solid #000;
+      &:focus {
+        outline: none;
+        border: 1px solid #ffa542;
+      }
+    }
+  }
+  .header-leftside {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-choose-phone {
+    display: none;
+  }
+
+  .header-panel {
+    // margin-right: 50px;
+  }
+}

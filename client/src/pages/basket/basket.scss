@@ -1,0 +1,194 @@
+.basket {
+  .basket-items {
+    display: flex;
+    justify-content: space-between;
+    .basket-total {
+      display: flex;
+      padding-top: 20px;
+      flex-direction: column;
+      width: 370px;
+      height: 105px;
+      -webkit-box-shadow: -9px -7px 30px 1px rgba(34, 60, 80, 0.2);
+      -moz-box-shadow: -9px -7px 30px 1px rgba(34, 60, 80, 0.2);
+      box-shadow: -9px -7px 30px 1px rgba(34, 60, 80, 0.2);
+      border-radius: 15px;
+      button {
+        padding: 0;
+        align-items: center;
+        cursor: pointer;
+        height: 65px;
+        font-size: 17px;
+        width: 100%;
+        font-weight: 600;
+
+        justify-content: center;
+        display: flex;
+        background-color: #101010;
+        color: #fff;
+        border: none;
+        font-family: "Montserrat";
+        padding: 10px;
+        border-radius: 20px;
+        transition: all 0.5s ease;
+        &:hover {
+          color: #ffa542;
+          transform: scale(1.05);
+          font-size: 16px;
+        }
+      }
+      .basket-total-info {
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .basket-empty {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    img {
+      width: 410px;
+      height: 315px;
+      margin-bottom: 30px;
+    }
+    .empty-basket-header {
+      font-weight: 500;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .empty-basket-span {
+      font-weight: 400;
+      font-size: 20px;
+      color: #838383;
+      margin-bottom: 30px;
+    }
+    .empty-basket-button {
+      cursor: pointer;
+      color: #fff;
+      background-color: #101010;
+      height: 55px;
+      font-family: "Montserrat";
+      font-weight: 600;
+      font-size: 17px;
+      border-radius: 20px;
+      border: none;
+
+      width: 408px;
+      margin-bottom: 100px;
+      transition: all 0.6s ease;
+      &:hover {
+        color: #ffa542;
+        transform: scale(1.03);
+      }
+    }
+  }
+  .basket-products {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    .basket-product {
+      position: relative;
+      width: 633px;
+      padding-left: 25px;
+      padding-top: 15px;
+      height: 318px;
+      background-color: #fff;
+      -webkit-box-shadow: 5px 2px 46px 15px rgba(34, 60, 80, 0.17);
+      -moz-box-shadow: 5px 2px 46px 15px rgba(34, 60, 80, 0.17);
+      box-shadow: 5px 2px 46px 15px rgba(34, 60, 80, 0.17);
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 40px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: translateY(2px);
+      }
+      .basket-product-top {
+        display: flex;
+        align-items: center;
+        margin-right: 150px;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+      .basket-product-delete-img {
+        display: flex;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        cursor: pointer;
+        transition: all .3s ease;
+        &:hover { 
+          opacity: 0.7;
+        }
+      }
+      .basket-product-price {
+        display: flex;
+        justify-content: space-between;
+
+        .basket-product-counter {
+          display: flex;
+          align-items: center;
+          img {
+            cursor: pointer;
+          }
+          span {
+            margin-right: 50px;
+            margin-left: 50px;
+            font-size: 17px;
+            font-weight: 600;
+          }
+        }
+        .basket-product-total-price {
+          margin-right: 30px;
+          font-weight: 600;
+          font-size: 15px;
+        }
+      }
+    }
+    .basket-product-info {
+      margin-left: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+    .basket-product-info-title {
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 17px;
+    }
+    .basket-product-info-price {
+      margin-bottom: 10px;
+      color: #aaaaaa;
+      font-weight: 600;
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .basket {
+    max-width: 400px;
+
+    .basket-items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .basket-product {
+      max-width: 400px;
+    }
+    .basket-total {
+      margin-bottom: 300px;
+    }
+  }
+}

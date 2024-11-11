@@ -1,0 +1,94 @@
+.not-login {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  input {
+    width: 300px;
+    font-family: "Montserrat";
+    border-radius: 15px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  .profile-data-info {
+    display: flex;
+    span {
+      margin-bottom: 20px;
+      font-size: 19px;
+    }
+    flex-direction: column;
+  }
+  h1 {
+    margin-top: 25px;
+  }
+  .profile-data {
+    margin-top: 15px;
+  }
+  .profile-add-info {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      // margin-top: 10px;
+    }
+  }
+  .profile-pages {
+    display: flex;
+    flex-direction: column;
+
+    .profile-pages-div {
+      display: flex;
+      margin-bottom: 240px;
+
+      justify-content: space-between;
+      .profile-buttons {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    button {
+      cursor: pointer;
+      color: #fff;
+      background-color: #101010;
+      height: 55px;
+      font-family: "Montserrat";
+      font-weight: 600;
+      font-size: 17px;
+      border-radius: 20px;
+      border: none;
+      margin-bottom: 10px;
+      width: 320px;
+      transition: all 0.6s ease;
+      &:hover {
+        color: #ffa542;
+        transform: scale(1.03);
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .profile-container {
+    max-width: 400px;
+    display: flex;
+
+    .profile-pages-div {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      // margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}

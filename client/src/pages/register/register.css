@@ -1,0 +1,58 @@
+.register-container .register-pages {
+  display: flex;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  flex-direction: column;
+  padding-top: 40px;
+  width: 800px;
+  border-radius: 15px;
+  margin: 50px auto;
+  align-items: center;
+}
+.register-container .register-pages .register-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.register-container .register-pages .register-form .error-span {
+  margin-bottom: 20px;
+}
+.register-container .register-pages .register-form img {
+  position: absolute;
+  right: 20px;
+  top: 67px;
+  cursor: pointer;
+}
+.register-container .register-pages h1 {
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.register-container .register-pages input {
+  border: 1px solid black;
+  width: 300px;
+  font-family: "Montserrat";
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+.register-container .register-pages button {
+  cursor: pointer;
+  color: #fff;
+  background-color: #101010;
+  height: 55px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 17px;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 10px;
+  width: 320px;
+  transition: all 0.6s ease;
+}
+.register-container .register-pages button:hover {
+  color: #ffa542;
+  transform: scale(1.03);
+}
+.register-container .register-pages span {
+  margin-bottom: 200px;
+  color: #838383;
+}/*# sourceMappingURL=register.css.map */

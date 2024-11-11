@@ -1,0 +1,128 @@
+.product-page {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+.product-page .product-page-title {
+  margin-bottom: 60px;
+}
+.product-page .product-page-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.product-page .product-page-container .product-page-img-container {
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.product-page .product-page-container .product-page-img-container img {
+  margin-bottom: 20px;
+  margin-left: 200px;
+}
+.product-page .product-page-container .product-page-img-container .product-page-img-container-description {
+  width: 650px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  padding: 50px;
+  padding-top: 10px;
+  margin-top: 60px;
+  margin-right: 10px;
+}
+.product-page .product-page-container .product-page-decription {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  line-height: 50px;
+}
+.product-page .product-page-container .product-page-decription .product-page-decription-title {
+  font-weight: 700;
+  font-size: 24px;
+}
+.product-page .product-page-container .product-page-decription .product-page-decription-price {
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.product-page .product-page-container .product-page-buttons button {
+  cursor: pointer;
+  width: 250px;
+  margin-top: 15px;
+  background-color: #101010;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.product-page .product-page-container .product-page-buttons button img {
+  margin-right: 10px;
+}
+.product-page .reviews-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product-page .reviews-container .reviews {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.product-page .reviews-container .reviews .review {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 32px 0px rgba(34, 60, 80, 0.2);
+  width: 500px;
+}
+.product-page .reviews-container .reviews .review .review-author {
+  font-size: 15px;
+  font-weight: 500;
+}
+.product-page .reviews-container form {
+  display: flex;
+  flex-direction: column;
+}
+.product-page .reviews-container form button {
+  margin-top: 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #101010;
+  height: 55px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 17px;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 10px;
+  width: 265px;
+  transition: all 0.6s ease;
+}
+.product-page .reviews-container form button:hover {
+  color: #ffa542;
+  transform: scale(1.03);
+}
+.product-page .reviews-container form div {
+  display: flex;
+  align-items: center;
+}
+.product-page .reviews-container form input {
+  font-size: 15px;
+  margin-right: 10px;
+  font-family: "Montserrat";
+  width: 250px;
+  padding: 10px 3px;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+.product-page .reviews-container form input:focus {
+  outline: none;
+  border: 1px solid #ffa542;
+}/*# sourceMappingURL=product.css.map */
