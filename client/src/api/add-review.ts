@@ -14,7 +14,8 @@ export const addReview = async ({
   rate,
   content,
 }: addReviewProps) => {
-  await fetch(`http://localhost:3000/reviews`, {
+  // console.log('xuy')
+ return  await fetch(`http://localhost:3000/reviews`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

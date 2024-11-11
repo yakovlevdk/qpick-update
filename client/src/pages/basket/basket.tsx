@@ -38,6 +38,7 @@ export const Basket: React.FC = () => {
   useEffect(() => {
     handleRender();
     if (userBasket.length) {
+      console.log('userBasket[0]', userBasket)
       const productsList = userBasket[0].products;
       setProductsFromBasket(() => GetBasketProducts(allProducts, productsList));
     }

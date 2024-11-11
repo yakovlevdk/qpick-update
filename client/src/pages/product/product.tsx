@@ -13,14 +13,14 @@ import { Reviews } from "./components/reviews/reviews";
 import { useSetBaskets } from "../../hooks/use-set-baskets/use-set-baskets";
 import { useSetProducts } from "../../hooks/use-set-products/use-set-products";
 import { getCookieToken } from '../../utils/get-cookie-token'
-import {productType } from '../../types/productType'
+import { productType } from '../../types/productType'
 import { RootState } from '../../store'
-
 
 type itemsType = { label: string; url: string }[];
 export const Product: React.FC = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
   const [update, setUpdate] = useState(false);
   const products = useSelector((state: RootState) => state.products.products);
   const [items, setItems] = useState<itemsType | []>([]);
@@ -30,8 +30,7 @@ export const Product: React.FC = () => {
   const [product, setProduct] = useState<productType | null>(null);
   const { handleAddToCart } = useAddToCart();
   const [productTypeUrl, setProductTypeUrl] = useState<string>("");
-  const [cookieValue] = useState(() => getCookieToken()
-  );
+  const [cookieValue] = useState(() => getCookieToken());
 
   useEffect(() => {
     handleSetProducts();
@@ -40,27 +39,29 @@ export const Product: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const prod = products.find((item: productType) => item["_id"] === id);
-    if (prod) {
-      setProduct(prod);
-    } else { 
-      navigate('/error')
+    if (products.length > 0) {
+      setLoading(false);
+      const prod = products.find((item: productType) => item["_id"] === id);
+      if (prod) {
+        setProduct(prod);
+      } else {
+        navigate('/error'); 
+      }
     }
   }, [update, id, products]);
 
   useEffect(() => {
     if (product) {
-      if  (product.type) {
-        const currentType = checkCurrentProductType(product.type)
-        if (currentType) { 
-          setCurrentType(currentType)
+      if (product.type) {
+        const currentType = checkCurrentProductType(product.type);
+        if (currentType) {
+          setCurrentType(currentType);
         }
         setProductTypeUrl(product.type.toLowerCase());
-      } 
-
-
+      }
     }
   }, [product]);
+
   useEffect(() => {
     if (product && currentType && productTypeUrl) {
       setItems([
@@ -83,7 +84,7 @@ export const Product: React.FC = () => {
   );
 
   const uniqueColors = Array.from(
-    new Map(colorsForUniqueTitles.map(item => [item.specifications.color, item])).values()
+    new Map(colorsForUniqueTitles.map((item) => [item.specifications.color, item])).values()
   );
 
   const renderSpecifications = (specifications: productType["specifications"]) => {
@@ -98,6 +99,9 @@ export const Product: React.FC = () => {
         </div>
       ));
   };
+
+  if (loading) return <div>Loading...</div>;
+
   return (
     <>
       {product && (

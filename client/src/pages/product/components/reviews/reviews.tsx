@@ -15,7 +15,7 @@ interface ReviewsProps {
 }
 
 export const Reviews: React.FC<ReviewsProps> = ({ productId } ) => {
-  const [value, setValue] = useState<number | null>(5);
+  const [value, setValue] = useState<number | null>(null);
 const navigate = useNavigate()
   const [content, setContent] = useState("");
   const dispatch = useDispatch();
@@ -55,14 +55,13 @@ const navigate = useNavigate()
         content: content,
       });
     }
-   
   };
 
   return (
     <div className="reviews-container">
       <h1>Отзывы</h1>
       {cookieValue && (
-        <form onSubmit={addNewReview}>
+        <form>
           <div className="add-review">
             <input
               placeholder="Ваш отзыв..."
@@ -72,11 +71,11 @@ const navigate = useNavigate()
             <Rating
               name="simple-controlled"
               value={value}
-              onChange={(newValue) => {
+              onChange={(event, newValue) => {
                 setValue(newValue);
               }}
             />
-            <button type="submit" className="otpravit">
+            <button  onClick={addNewReview} type="submit" className="otpravit">
               Отправить
             </button>
           </div>

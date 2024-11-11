@@ -23,7 +23,7 @@ function Qpick() {
     return basket.reduce((total, userBasket) => {
       return (
         total +
-        userBasket.products.reduce((subtotal, product) => {
+        userBasket?.products.reduce((subtotal, product) => {
           return subtotal + product.quantity;
         }, 0)
       );

@@ -105,6 +105,18 @@ app.get("/reviews", async (req, res) => {
   res.json(reviews);
 });
 
+app.post("/reviews", async (req, res) => {
+  console.log('nexuy')
+  await addReview(
+    req.body.productId,
+    req.body.userId,
+    req.body.userName,
+    req.body.rate,
+    req.body.content
+  );
+});
+
+
 app.use(authenticated);
 app.put('/products/edit/:id', async (req, res) => { 
   try {
@@ -139,15 +151,7 @@ app.delete('/deleteProduct/:id', async(req,res) =>  {
  return res.status(204).send()
 })
 
-app.post("/reviews", async (req, res) => {
-  await addReview(
-    req.body.productId,
-    req.body.userId,
-    req.body.userName,
-    req.body.rate,
-    req.body.content
-  );
-});
+
 mongoose
   .connect(
     "mongodb+srv://yakovlevdk39:lasos2281@cluster0.0k8rc.mongodb.net/qpick?retryWrites=true&w=majority&appName=Cluster0"

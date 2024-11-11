@@ -6,6 +6,7 @@ async function getReviews() {
 }
 
 async function addReview(productId, userId, userName, rate, content) {
+  console.log('XUYY')
   await Review.create({
     product_id: productId,
     user_id: userId,
